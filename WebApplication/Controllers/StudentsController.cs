@@ -6,18 +6,10 @@ namespace WebApplication.Controllers
     [Route("api/students")]
     public class StudentsController : ControllerBase
     {
-        [HttpGet("{id}")]
-        public IActionResult GetStudents(int id)
+        [HttpGet]
+        public string GetStudents(string orderBy)
         {
-            if (id == 1)
-            {
-                return Ok("Kowalski");
-            }else if (id == 2)
-            {
-                return Ok("Malewski");
-            }
-
-            return NotFound("Nie ma takiego studenta");
+            return $"Kowalski,Malewski,Andrzejewski sortowanie={orderBy}";
         }
     }
 }
