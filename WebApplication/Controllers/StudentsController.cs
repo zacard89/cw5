@@ -1,5 +1,6 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
+using WebApplication.DAL;
 using WebApplication.Models;
 
 namespace WebApplication.Controllers
@@ -8,10 +9,16 @@ namespace WebApplication.Controllers
     [Route("api/students")]
     public class StudentsController : ControllerBase
     {
-        [HttpGet]
-        public string GetStudents(string orderBy)
+        private readonly IDbService _dbService;
+
+        public StudentsController(IDbService dbService)
         {
-            return $"Kowalski,Malewski,Andrzejewski sortowanie={orderBy}";
+            _dbService = dbService;
+        }
+        [HttpGet]
+        public IActionResult GetStudents(string orderBy)
+        {
+            return Ok(_dbService.GetStudents());
         }
 
         [HttpPost]
