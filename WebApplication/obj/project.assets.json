@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/zacard/RiderProjects/WebApplication/WebApplication/WebApplication.csproj",
+      "projectUniqueName": "/Users/zacard/RiderProjects/cw3/WebApplication/WebApplication.csproj",
       "projectName": "WebApplication",
-      "projectPath": "/Users/zacard/RiderProjects/WebApplication/WebApplication/WebApplication.csproj",
+      "projectPath": "/Users/zacard/RiderProjects/cw3/WebApplication/WebApplication.csproj",
       "packagesPath": "/Users/zacard/.nuget/packages/",
-      "outputPath": "/Users/zacard/RiderProjects/WebApplication/WebApplication/obj/",
+      "outputPath": "/Users/zacard/RiderProjects/cw3/WebApplication/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/zacard/.config/NuGet/NuGet.Config"
