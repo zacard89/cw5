@@ -36,3 +36,10 @@
 /Users/zacard/RiderProjects/cwiczenia4/WebApplication/obj/Debug/netcoreapp3.1/WebApplication.dll
 /Users/zacard/RiderProjects/cwiczenia4/WebApplication/obj/Debug/netcoreapp3.1/WebApplication.pdb
 /Users/zacard/RiderProjects/cwiczenia4/WebApplication/obj/Debug/netcoreapp3.1/WebApplication.genruntimeconfig.cache
+/Users/zacard/RiderProjects/cwiczenia4/WebApplication/bin/Debug/netcoreapp3.1/System.Data.SqlClient.dll
+/Users/zacard/RiderProjects/cwiczenia4/WebApplication/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll
+/Users/zacard/RiderProjects/cwiczenia4/WebApplication/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll
+/Users/zacard/RiderProjects/cwiczenia4/WebApplication/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll
+/Users/zacard/RiderProjects/cwiczenia4/WebApplication/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/Users/zacard/RiderProjects/cwiczenia4/WebApplication/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Data.SqlClient.dll
+/Users/zacard/RiderProjects/cwiczenia4/WebApplication/obj/Debug/netcoreapp3.1/WebApplication.csproj.CopyComplete
