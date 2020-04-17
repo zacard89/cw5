@@ -12,7 +12,7 @@ namespace WebApplication.Controllers
     [Route("api/students")]
     public class StudentsController : ControllerBase
     {
-        private const string ConString = "Data Source=sql.zacard.nazwa.pl;Initial Catalog=zacard_pjatk;Integrated Security=True";
+        private const string ConString = "Data Source=jdbc:mysql://sql.zacard.nazwa.pl:3306;Initial Catalog=zacard_pjatk;Integrated Security=True";
         private readonly IDbService _dbService;
 
         public StudentsController(IDbService dbService)
@@ -43,9 +43,31 @@ namespace WebApplication.Controllers
             return Ok(list);
         }
         
-        
-        
+        [HttpGet("{indexNumber}")]
+        public IActionResult GetStudent(string indexNumber)
+        {
+            using (SqlConnection con = new SqlConnection(ConString))
+            using (SqlCommand com = new SqlCommand())
+            {
+                com.Connection = con;
+                com.CommandText = "select * from students where indexnumber=@index";
+                com.Parameters.AddWithValue("index", indexNumber);
 
+                con.Open();
+                var dr = com.ExecuteReader();
+                if (dr.Read())
+                {
+                    var st = new Students();
+                    st.IndexNumer = dr["IndexNumber"].ToString();
+                    st.FirstName = dr["FirstName"].ToString();
+                    st.LastName = dr["LastName"].ToString();
+                    return Ok(st);
+                }
+
+            }
+
+            return NotFound();
+        }
         [HttpPost]
         public IActionResult CreateStudent(Students student)
         {
