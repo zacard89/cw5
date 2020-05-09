@@ -41,7 +41,11 @@ namespace WebApplication.Controllers
                 while(dr.Read())
                 {
                     var st = new Students();
+                    st.IndexNumer = dr["IndexNumber"].ToString();
                     st.FirstName = dr["FirstName"].ToString();
+                    st.LastName = dr["LastName"].ToString();
+                    
+                    list.Add(st);
                 }
             }
 
@@ -55,7 +59,7 @@ namespace WebApplication.Controllers
             using (SqlCommand com = new SqlCommand())
             {
                 com.Connection = con;
-                com.CommandText = "select * from students where indexnumber=@index";
+                com.CommandText = "select * from Student where IndexNumber=@index";
                 com.Parameters.AddWithValue("index", indexNumber);
 
                 con.Open();
