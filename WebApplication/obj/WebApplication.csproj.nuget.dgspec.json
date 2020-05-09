@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/zacard/RiderProjects/cwiczenia4/WebApplication/WebApplication.csproj": {}
+    "/Users/zacard/RiderProjects/cw4.2/WebApplication/WebApplication.csproj": {}
   },
   "projects": {
-    "/Users/zacard/RiderProjects/cwiczenia4/WebApplication/WebApplication.csproj": {
+    "/Users/zacard/RiderProjects/cw4.2/WebApplication/WebApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/zacard/RiderProjects/cwiczenia4/WebApplication/WebApplication.csproj",
+        "projectUniqueName": "/Users/zacard/RiderProjects/cw4.2/WebApplication/WebApplication.csproj",
         "projectName": "WebApplication",
-        "projectPath": "/Users/zacard/RiderProjects/cwiczenia4/WebApplication/WebApplication.csproj",
+        "projectPath": "/Users/zacard/RiderProjects/cw4.2/WebApplication/WebApplication.csproj",
         "packagesPath": "/Users/zacard/.nuget/packages/",
-        "outputPath": "/Users/zacard/RiderProjects/cwiczenia4/WebApplication/obj/",
+        "outputPath": "/Users/zacard/RiderProjects/cw4.2/WebApplication/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/zacard/.config/NuGet/NuGet.Config"
+          "/Users/zacard/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

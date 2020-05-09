@@ -12,7 +12,12 @@ namespace WebApplication.Controllers
     [Route("api/students")]
     public class StudentsController : ControllerBase
     {
-        private const string ConString = "Data Source=jdbc:mysql://sql.zacard.nazwa.pl:3306;Initial Catalog=zacard_pjatk;Integrated Security=True";
+        private const string ConString = @"
+   Server=127.0.0.1,1433;
+   Database=apbd;
+   User Id=sa;
+   Password=yourStrong(!)Password
+";
         private readonly IDbService _dbService;
 
         public StudentsController(IDbService dbService)
@@ -30,7 +35,7 @@ namespace WebApplication.Controllers
             using (SqlCommand com = new SqlCommand())
             {
                 com.Connection = con;
-                com.CommandText = "Select * from students";
+                com.CommandText = "Select * from Student";
                 con.Open();
                 var dr = com.ExecuteReader();
                 while(dr.Read())
