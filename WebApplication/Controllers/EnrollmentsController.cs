@@ -1,13 +1,27 @@
 using Microsoft.AspNetCore.Mvc;
+using WebApplication.DTOs.Requests;
+using WebApplication.Services;
+
 
 namespace WebApplication.Controllers
 {
-    public class EnrollmentsController : Controller
+    [ApiController]
+    [Route("api/enrollments")]
+    public class EnrollmentsController : ControllerBase
     {
-        // GET
-        public IActionResult Index()
+
+        private IStudentDbService _service;
+
+        public EnrollmentsController(IStudentDbService service)
         {
-            return View();
+            _service = service;
+        }
+
+        [HttpPost]
+        public IActionResult EnrollStudent(EnrollStudentRequest request)
+        {
+            _service.EnrollStudent(request);
+            return Ok();
         }
     }
 }
